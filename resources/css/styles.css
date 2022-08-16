@@ -1,0 +1,531 @@
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+h1{ font-size: 4rem;}
+h2{ font-size: 3rem;}
+h3{ font-size: 1.8rem;}
+h4{ font-size: 1.8rem;}
+p{ font-size: 1rem;}
+a{ font-size: 1.25rem;}
+
+/* Button */
+
+button {
+    background-color: #ffffff;
+    color: #1a130d;
+    border: 1px solid rgba(26, 19, 13, 0.5);
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: .3rem .8rem;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (pointer:fine){
+    button:hover {
+        background-color: #3d3732;
+        color:#fff;
+        cursor: pointer;
+        transform: translateY(-4px) scale(1.1);
+        box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.5);
+        transition-duration: .3s;
+    }
+
+}
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    transition-duration: .05s;
+}
+/* Header */
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    width: 100%;
+    background-color: rgb(132, 116, 103);
+    border-bottom: 3px solid rgb(61, 55, 50);
+}
+
+header .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+
+header .logo {
+    font-family: "kelly slab";
+    color: white;
+    padding-left: 1rem
+}
+
+/* nav */
+header nav {
+    padding: 1rem 0;
+}
+header a {
+    color: white;
+    padding: 1rem 1rem;
+    justify-content: center;
+}
+@media (pointer:fine){
+    header a:hover {
+        background: linear-gradient(
+            0deg, 
+            #3d3732 22%, 
+            rgba(61, 56, 51, 0.55) 100%);
+        transition-duration: 300ms;
+    }
+}
+@media only screen and (max-width: 900px){
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    header .logo {
+        padding: .5rem;
+    }
+} 
+
+@media only screen and (max-width: 550px){
+    header nav {
+        padding: .5rem;
+    }
+    header nav a {
+        padding: .5rem;
+        font-size: .8rem;
+    }
+}
+
+/* Main */
+
+
+/* Description */
+
+
+#description {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    max-height: 1080px;
+}
+
+/* description/Image Section */
+
+#description .img-container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    border-bottom-right-radius: 300px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5))
+        ,url(../images/banner-unsplash.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#description  img {
+    max-height: 70%;
+    max-width: 70%;
+    padding: 1rem;
+    margin: auto;
+}
+
+/* description/Text Section */
+
+#description .text-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#description .text-container h1,
+#description .text-container p{
+    max-width: 700px;
+    padding: 2rem 3rem;
+}
+
+#description .text-container h1 {
+    font-family: "kelly slab";
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0px 7px 2px rgba(0, 0, 0, 0.15);
+}
+
+#description .text-container p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 900px){
+    #description {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #description .img-container {
+        width: 100%;
+        border-radius: 0%;
+    }
+
+    #description .img-container img {
+        max-height: 20vh;
+    }
+
+    #description .text-container {
+        width: 100%;
+    }
+
+    #description .text-container h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #description .text-container p {
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Statements section */
+#statements {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    max-height: 960px;
+    padding-top: 90px;
+}
+
+#statements .panel-container {
+    display: flex;
+    background-color: #516D5E;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        #233D30);
+    width: 100%;
+    height: 80%;
+    padding: 0px 1rem 0px 1rem;
+}
+
+#statements .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#statements .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 32%;
+    min-height: 100%;
+    text-align: center;
+    background-color: #233D30;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+#statements .panel .img-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+#statements .panel .img-container .mobile {
+    display: none;
+}
+#statements .panel:first-child .img-container{
+    background-image: url(../images/tools-unsplash-Cropped.jpg);
+}
+
+#statements .panel:nth-child(2) .img-container{
+    background-image: url(../images/group-Cropped.jpg);
+}
+
+#statements .panel:last-child .img-container{
+    background-image: url(../images/idea1-Cropped.jpg);
+}
+
+#statements .panel h3{
+  color: #fff;
+  padding: 10%;
+  font-style: italic;
+}
+
+#statements .panel button {
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #statements {
+        height: auto;
+    }
+
+    #statements .panel-container {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #statements .container {
+        flex-direction: column;
+    }
+
+    #statements .panel {
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        border: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    #statements .panel .img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+    }
+
+    
+    #statements .panel:first-child .img-container{
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+            ), url(../images/tools-unsplash-Cropped.jpg);
+    }
+    
+    #statements .panel:nth-child(2) .img-container{
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+            ), url(../images/group-Cropped.jpg);
+    }
+    
+    #statements .panel:last-child .img-container{
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+            ), url(../images/idea1-Cropped.jpg);
+    }
+    
+    #statements .panel .img-container {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+            );
+        }
+        
+    #statements .panel .img-container .mobile {
+        display: flex;
+    }
+
+    #statements .panel .img-container h3.mobile {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+
+    #statements .panel .desktop {
+        display: none;
+    }
+
+
+}
+
+/* Hobbies */
+
+#hobbies {
+  width: 100%;
+  padding-top: 90px;
+}
+
+#hobbies .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "kelly slab";
+    font-weight: 700;
+    text-shadow: 0px 7px 2px rgba(0, 0, 0, 0.15);
+}
+
+.hobby-section {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0rem;
+  border-bottom: 1px solid #1a130d;
+}
+
+.hobby-section:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+
+.hobby-section .img-container {
+    display: flex;
+    justify-content: center;
+    flex: 1 1;
+    padding: 0px 16px;
+}
+
+
+.hobby-section .img-container img{
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: 240px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hobby-section .text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 2rem;
+    flex: 1 2
+}
+
+.hobby-section .text-container h3{
+    font-weight: 500;
+}
+
+.hobby-section .text-container h3, .hobby-section .text-container p {
+    max-width: 400px;
+}
+
+.hobby-section .text-container h3 {
+    padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    #hobbies {
+        margin-bottom: 2rem;
+    }
+    .hobby-section {
+        flex-direction: column;
+    }
+    .hobby-section:nth-child(even){
+        flex-direction: column;
+    }
+    .hobby-section .text-container h3, .hobby-section .text-container p {
+        text-align: center;
+    }
+    .hobby-section .img-container img{
+        height: 240px;
+    }
+}
+
+/* Workshops */
+
+#workshops {
+    width:100%;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+ #workshops .heading{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: "kelly slab";
+    font-weight: 700;
+    text-shadow: 0px 7px 2px rgba(0, 0, 0, 0.15);
+ }
+
+#workshops .workshops-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6))
+        ,url(../images/workshopbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#workshops .panel {
+    color: #fff;
+    max-width: 100%;
+    text-align: center;
+}
+
+#workshops .panel h3, 
+#workshops .panel p {
+    margin: 1rem 2rem;
+
+}
+
+
+
+
+/* Footer */
+
+footer {
+    display: block;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.footer-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem;
+    border-top: 1px solid rgb(61, 55, 50);
+}
+
+footer nav a{
+    padding: 1.5rem;
+}
+
+
+@media only screen and (max-width:650px){
+    .footer-block {
+        flex-direction: column-reverse;
+        font-size: .8rem;
+    }
+    
+    footer nav a {
+        padding: .4rem;
+        font-size: .9rem;
+    }
+    footer span {
+        margin: 1.5rem 0 .5rem 0;
+    }
+}
